@@ -7,7 +7,7 @@
 }
 body {
   width: 100%;
-  font-family: sans;
+  font-family: 'Montserrat', sans-serif;
 }
 #container {
   width: 100%;
@@ -54,10 +54,10 @@ a:hover {
 }
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 80px 40px;
-  flex-wrap:wrap
+  padding:20px;
+  /* flex-wrap:wrap */
 }
 .left-content h1 {
   font-size: 50px;
@@ -91,7 +91,10 @@ section{
     margin:10px;
 }
 .card-section{
-    margin: 80px;
+    /* margin: 80px; */
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
 }
 .card{
     width:250px;
@@ -139,8 +142,8 @@ footer{
     width:100%;
     background-color:#020f17;
     display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
+    /* flex-wrap:wrap; */
+    justify-content:space-around;
     color:#fff;
     padding:40px;
     /* align-items:center; */
@@ -191,55 +194,66 @@ footer button{
 
 }
 @media(max-width:700px){
-    nav {
+  .menu {
         display: none;
         flex-direction: column;
-        background: #333;
-        padding: 2rem;
-        cursor: pointer;
+        background-color: #fff;
+        width:100%;
      
 }
-#menu-toggle:checked + .menu-icon + nav {
-    display: block;
+#menu-toggle:checked + .menu-icon + .logo + .menu{
+    display:flex;
+    
   }
   .menu-icon {
     display: block;
     float: left;
   }
   .navbar {
-    display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
   }
-  .header h1{
+
+  /* Hero setion */
+  /* .header h1{
     font-size:20px;
   }
   .header p{
 
-  }
+  } */
      .hero{
-      margin:50px 0px;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
      }
-     .hero .right-content{
-        margin:30px 0px;
-     }
-     .hero img{
-        width:300px;
-        height:150px;
-     }
-     section{
-        margin:250px 0px 100px 0px;
+     .hero .right-content img{
+
+      width:100%;
+      height:auto;
+    }
+    /* card section */
+     .card-section{
+        flex-direction:column;
+        align-items:center;
       
      }
-     .link-sections a{
+     /* .link-sections a{
         display:block;
      }
      select{
         display:none;
-     }
+     } */
      .card{
-        margin:30px 0px;
+        margin-bottom:20px;
+        width:90px;
+     }
+     /* footer section */
+     footer{
+      flex-direction:cloumn;
+      align-items:center;
+      text-align:center;
+     }
+     .footer-menu, .contact-info{
+      margin-top:20px;
      }
 }
