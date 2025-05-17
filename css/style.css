@@ -125,7 +125,7 @@ section{
     width:250px;
     border:0.3px solid #333;
     border-radius:8px;
-    /* height:420px; */
+    height:400px;
     overflow:hidden;
      display:flex;
     flex-direction:column;
@@ -133,6 +133,7 @@ section{
     height:100%;
      /* padding:20px; */
      margin:20px;
+     object:fit;
      /* flex:1; */
 
    
